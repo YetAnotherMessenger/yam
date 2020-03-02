@@ -24,7 +24,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="mNs-ht-KrL">
-                        <barButtonItem key="rightBarButtonItem" title="Setting" landscapeImage="settings" largeContentSizeImage="settings" id="oeq-7o-az8">
+                        <barButtonItem key="rightBarButtonItem" title="Setting" image="gear" catalog="system" landscapeImage="settings" largeContentSizeImage="settings" id="oeq-7o-az8">
                             <connections>
                                 <segue destination="rAN-VE-fya" kind="show" id="lRu-EI-B4q"/>
                             </connections>
@@ -44,6 +44,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.079665891826152802" green="0.71678084135055542" blue="0.79299861192703247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="MB7-NO-aRX"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="G6Y-J7-7UO"/>
                 </viewController>
@@ -72,6 +75,7 @@
     </scenes>
     <resources>
         <image name="background" width="405" height="720"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="settings" width="58" height="60"/>
     </resources>
 </document>
