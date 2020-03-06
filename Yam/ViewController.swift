@@ -18,10 +18,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         LoginView.layer.cornerRadius = 20
         LoginView.layer.masksToBounds = true
-  
-        
-        //VerticalConstrain.constant = 100
-        // Do any additional setup after loading the view.
     }
 
 
