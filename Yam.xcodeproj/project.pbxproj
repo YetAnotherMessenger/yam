@@ -15,6 +15,11 @@
 		BB46A241240A89A300DB74C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB46A23F240A89A300DB74C4 /* LaunchScreen.storyboard */; };
 		BB46A24C240A89A300DB74C4 /* YamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46A24B240A89A300DB74C4 /* YamTests.swift */; };
 		BB46A257240A89A300DB74C4 /* YamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46A256240A89A300DB74C4 /* YamUITests.swift */; };
+		BB46A265240D54E300DB74C4 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46A264240D54E300DB74C4 /* Messenger.swift */; };
+		BB46A267240D567C00DB74C4 /* VKClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46A266240D567C00DB74C4 /* VKClass.swift */; };
+		BB46A26F2412CA4A00DB74C4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46A26E2412CA4A00DB74C4 /* Person.swift */; };
+		BB46A2712412CB3B00DB74C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46A2702412CB3B00DB74C4 /* User.swift */; };
+		BB46A2732412E1EA00DB74C4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46A2722412E1EA00DB74C4 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		BB46A252240A89A300DB74C4 /* YamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB46A256240A89A300DB74C4 /* YamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamUITests.swift; sourceTree = "<group>"; };
 		BB46A258240A89A300DB74C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB46A264240D54E300DB74C4 /* Messenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
+		BB46A266240D567C00DB74C4 /* VKClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKClass.swift; sourceTree = "<group>"; };
+		BB46A26E2412CA4A00DB74C4 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		BB46A2702412CB3B00DB74C4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BB46A2722412E1EA00DB74C4 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,11 @@
 				BB46A236240A899F00DB74C4 /* SceneDelegate.swift */,
 				BB46A238240A899F00DB74C4 /* ViewController.swift */,
 				BB46A23A240A899F00DB74C4 /* Main.storyboard */,
+				BB46A264240D54E300DB74C4 /* Messenger.swift */,
+				BB46A2722412E1EA00DB74C4 /* Message.swift */,
+				BB46A266240D567C00DB74C4 /* VKClass.swift */,
+				BB46A26E2412CA4A00DB74C4 /* Person.swift */,
+				BB46A2702412CB3B00DB74C4 /* User.swift */,
 				BB46A23D240A89A300DB74C4 /* Assets.xcassets */,
 				BB46A23F240A89A300DB74C4 /* LaunchScreen.storyboard */,
 				BB46A242240A89A300DB74C4 /* Info.plist */,
@@ -262,6 +277,11 @@
 				BB46A239240A899F00DB74C4 /* ViewController.swift in Sources */,
 				BB46A235240A899F00DB74C4 /* AppDelegate.swift in Sources */,
 				BB46A237240A899F00DB74C4 /* SceneDelegate.swift in Sources */,
+				BB46A267240D567C00DB74C4 /* VKClass.swift in Sources */,
+				BB46A26F2412CA4A00DB74C4 /* Person.swift in Sources */,
+				BB46A2732412E1EA00DB74C4 /* Message.swift in Sources */,
+				BB46A265240D54E300DB74C4 /* Messenger.swift in Sources */,
+				BB46A2712412CB3B00DB74C4 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

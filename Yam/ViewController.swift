@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let testUser = User()
+        print("name:", testUser.Name, testUser.ID)
+        let testUser2 = Person()
+        testUser2.Name = "kekich"
+        print("name:", testUser2.Name, testUser2.ID)
     }
 
 
