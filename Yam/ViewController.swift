@@ -18,15 +18,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         LoginView.layer.cornerRadius = 20
         LoginView.layer.masksToBounds = true
-  
-        
-        //VerticalConstrain.constant = 100
-        // Do any additional setup after loading the view.
-        let testUser = User()
-        print("name:", testUser.Name, testUser.ID)
-        let testUser2 = Person()
-        testUser2.Name = "kekich"
-        print("name:", testUser2.Name, testUser2.ID)
     }
 
 
