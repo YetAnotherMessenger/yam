@@ -26,15 +26,18 @@ class User : Person {
         }
 
     }
-    func addContact(contact: Person, messengerName:String){
-        if let messenger = getMessengerByName(messengerName: messengerName){
-            guard let result = messenger.addContact(contact: contact)
+    func addContact(contact: Person, messengerName:String) {
+        if let messenger = getMessengerByName(messengerName: messengerName) {
+            if messenger.addContact(contact: contact) {
+                //success. todo: some code
+                return
+            }
         }
     }
     func getAllHistory(){
         for contact in self.FriendList {
             for messenger in self.MessengersList {
-                messenger.getHistory(contact)
+                messenger.getHistory(contact: contact)
                 //todo - add messages sorted by date to chat screen
             }
         }
