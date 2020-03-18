@@ -160,5 +160,6 @@
     <resources>
         <image name="background" width="405" height="720"/>
         <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="paperplane.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>

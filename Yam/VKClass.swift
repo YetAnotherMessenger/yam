@@ -7,12 +7,21 @@
 //
 
 import Foundation
+import Alamofire
 
 class VK : Messenger {
     override var Name : String { get { return "VK" } }
     //ADD VK LOGO!
     override func signIn(login: String, pass: String) -> Bool {
-        //todo: signin
+        let parameters = [
+            "client_id": "7339825",
+            "scope": "friends, messages",
+            "display":"touch",
+            "v":"5.103",
+            "redirect_uri":"https://oauth.vk.com/blank.html",
+            "response_type":"token"
+        ]
+
         return true
     }
     override func signOut() -> Bool {
