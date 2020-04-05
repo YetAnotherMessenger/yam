@@ -101,6 +101,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63EB3899243A190A0095B217 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB46A23A240A899F00DB74C4 /* Main.storyboard */,
+				63EB388A2432389B0095B217 /* Login.storyboard */,
+				BB46A23F240A89A300DB74C4 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		63EB389A243A190E0095B217 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BB46A238240A899F00DB74C4 /* ViewController.swift */,
+				6330D8CF24288E3900DE8547 /* ViewMessenger.swift */,
+				63EB38922439FB5F0095B217 /* ContactsView.swift */,
+				63EB388C2432501B0095B217 /* ViewCell.swift */,
+				63EB3894243A052C0095B217 /* ContactCell.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		63EB389B243A19110095B217 /* Modle */ = {
+			isa = PBXGroup;
+			children = (
+				BB46A264240D54E300DB74C4 /* Messenger.swift */,
+				BB46A2722412E1EA00DB74C4 /* Message.swift */,
+				BB46A266240D567C00DB74C4 /* VKClass.swift */,
+				BB46A26E2412CA4A00DB74C4 /* Person.swift */,
+				BB46A2702412CB3B00DB74C4 /* User.swift */,
+			);
+			name = Modle;
+			sourceTree = "<group>";
+		};
 		96B258E8E62E28D0FC395235 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +155,9 @@
 		BB46A228240A899F00DB74C4 = {
 			isa = PBXGroup;
 			children = (
+				63EB389B243A19110095B217 /* Modle */,
+				63EB389A243A190E0095B217 /* Controller */,
+				63EB3899243A190A0095B217 /* View */,
 				BB46A233240A899F00DB74C4 /* Yam */,
 				BB46A24A240A89A300DB74C4 /* YamTests */,
 				BB46A255240A89A300DB74C4 /* YamUITests */,
@@ -145,21 +182,8 @@
 			children = (
 				BB46A234240A899F00DB74C4 /* AppDelegate.swift */,
 				BB46A236240A899F00DB74C4 /* SceneDelegate.swift */,
-				BB46A238240A899F00DB74C4 /* ViewController.swift */,
-				BB46A23A240A899F00DB74C4 /* Main.storyboard */,
-				63EB388A2432389B0095B217 /* Login.storyboard */,
-				BB46A264240D54E300DB74C4 /* Messenger.swift */,
-				BB46A2722412E1EA00DB74C4 /* Message.swift */,
-				BB46A266240D567C00DB74C4 /* VKClass.swift */,
-				BB46A26E2412CA4A00DB74C4 /* Person.swift */,
-				BB46A2702412CB3B00DB74C4 /* User.swift */,
 				BB46A23D240A89A300DB74C4 /* Assets.xcassets */,
-				BB46A23F240A89A300DB74C4 /* LaunchScreen.storyboard */,
 				BB46A242240A89A300DB74C4 /* Info.plist */,
-				6330D8CF24288E3900DE8547 /* ViewMessenger.swift */,
-				63EB38922439FB5F0095B217 /* ContactsView.swift */,
-				63EB388C2432501B0095B217 /* ViewCell.swift */,
-				63EB3894243A052C0095B217 /* ContactCell.swift */,
 			);
 			path = Yam;
 			sourceTree = "<group>";
