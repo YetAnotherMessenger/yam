@@ -9,7 +9,7 @@
 import UIKit
 
 
-var messenger: [String] = ["user1","user2"]
+var messenger: [String] = [" "," "]
 
 class ViewMessenger: UIViewController {
 
@@ -40,13 +40,13 @@ extension ViewMessenger:UITableViewDataSource, UITableViewDelegate{
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: idCell)
         }
 //        test strings
-        cell!.textLabel?.text = "Username"
-        cell!.detailTextLabel?.text = "Messenge"
-        cell!.imageView?.image = #imageLiteral(resourceName: "logo")
+//        cell!.textLabel?.text = "Username"
+//        cell!.detailTextLabel?.text = "Messenge"
+//        cell!.imageView?.image = #imageLiteral(resourceName: "logo")
         return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 75.0
+        return 100.0
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
