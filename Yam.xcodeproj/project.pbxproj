@@ -123,7 +123,7 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		63EB389B243A19110095B217 /* Modle */ = {
+		63EB389B243A19110095B217 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				BB46A264240D54E300DB74C4 /* Messenger.swift */,
@@ -132,7 +132,7 @@
 				BB46A26E2412CA4A00DB74C4 /* Person.swift */,
 				BB46A2702412CB3B00DB74C4 /* User.swift */,
 			);
-			name = Modle;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		96B258E8E62E28D0FC395235 /* Frameworks */ = {
@@ -155,7 +155,7 @@
 		BB46A228240A899F00DB74C4 = {
 			isa = PBXGroup;
 			children = (
-				63EB389B243A19110095B217 /* Modle */,
+				63EB389B243A19110095B217 /* Model */,
 				63EB389A243A190E0095B217 /* Controller */,
 				63EB3899243A190A0095B217 /* View */,
 				BB46A233240A899F00DB74C4 /* Yam */,
