@@ -7,19 +7,20 @@
 //
 
 import UIKit
+import AuthenticationServices
 
 class ViewController: UIViewController {
-
     @IBOutlet weak var LoginView: UIView!
-
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         LoginView.layer.cornerRadius = 20
         LoginView.layer.masksToBounds = true
     }
+}
 
-
+extension ViewController  :ASWebAuthenticationPresentationContextProviding {
+    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+        return self.view.window ?? ASPresentationAnchor()
+    }
 }
 

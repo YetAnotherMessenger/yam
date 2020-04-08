@@ -9,35 +9,37 @@
 import Foundation
 
 class Person : Hashable {
-    static var RunningID : Int = 0
+    static var runningID : Int = 0
     
-    var ID : Int
-    var Name : String
-    var VKID : String
-    var PhoneNumber : String
-    var TelegramID : String
-    
-    // todo: more messengers
+    var id : Int
+    var name : String
+    var vkID : String
+    var phoneNumber : String
+    var telegramID : String
+    var photoURLString : String
+    // TODO: more messengers
     static func == (lhs: Person, rhs: Person) -> Bool {
-        return lhs.ID == rhs.ID
+        return lhs.id == rhs.id
     }
     init() {
-        self.Name = ""
-        self.VKID = ""
-        self.PhoneNumber = ""
-        self.TelegramID = ""
-        self.ID = Person.RunningID
-        Person.RunningID += 1
+        self.name = ""
+        self.vkID = ""
+        self.phoneNumber = ""
+        self.telegramID = ""
+        self.photoURLString = ""
+        self.id = Person.runningID
+        Person.runningID += 1
     }
-    init(name: String, vkID: String = "", phoneNumber: String = "", telegramID: String = "") {
-        self.Name = name
-        self.VKID = vkID
-        self.PhoneNumber = phoneNumber
-        self.TelegramID = telegramID
-        self.ID = Person.RunningID
-        Person.RunningID += 1
+    init(name: String, photoURL: String = "", vkID: String = "", phoneNumber: String = "", telegramID: String = "") {
+        self.name = name
+        self.vkID = vkID
+        self.phoneNumber = phoneNumber
+        self.telegramID = telegramID
+        self.id = Person.runningID
+        self.photoURLString = photoURL
+        Person.runningID += 1
     }
     func hash(into hasher: inout Hasher) {
-        hasher.combine(Person.RunningID)
+        hasher.combine(Person.runningID)
     }
 }
