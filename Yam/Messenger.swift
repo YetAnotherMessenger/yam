@@ -8,14 +8,25 @@
 
 import Foundation
 import UIKit
-//messengers' names: VK, Telegram, WhatsApp, ...
-class Messenger {
-    var Name : String { get { return "" } }
-    var Logo : UIImage {get {return UIImage()}}
-    func signIn(login: String, pass: String) -> Bool { return false }
-    func signOut() -> Bool { return false }
-    func getHistory(contact: Person) ->[ [Person:[Message]] ]  { return [] }
-    func getContacts() -> [Person]  { return [] }
-    func addContact(contact: Person) -> Bool { return false }
-    func sendMessage(message: String) -> Bool { return false }
+import AuthenticationServices
+
+protocol Messenger: class {
+    var name : String { get }
+    var logo : UIImage { get }
+    func signInLogPass(login: String, pass: String)
+    func signInWebAuth(contextProvider: ASWebAuthenticationPresentationContextProviding)
+    func signOut() -> Bool
+    func getHistory(contact: Person) ->[ [Person:[Message]] ]
+    func getContacts(success: @escaping (_ response: [Person]) -> Void, failure: @escaping(_ error: NSError?) -> Void) -> [Person]
+    func addContact(contact: Person) -> Bool
+    func sendMessage(message: String) -> Bool
+}
+
+extension Messenger {
+    func signInLogPass(login: String, pass: String){
+        return
+    }
+    func signInWebAuth(contextProvider: ASWebAuthenticationPresentationContextProviding) {
+        return
+    }
 }

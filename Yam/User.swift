@@ -9,22 +9,19 @@
 import Foundation
 
 class User : Person {
-    var MessengersList = [Messenger]()
-    var FriendList = [Person]()
+    var messengersList = [Messenger]()
+    var friendList = [Person]()
     
     func getMessengerByName(messengerName: String) -> Messenger? {
-        for messenger in self.MessengersList {
-            if messenger.Name == messengerName {
+        for messenger in self.messengersList {
+            if messenger.name == messengerName {
                 return messenger
             }
         }
         return nil
     }
     func addMessenger(login: String, pass: String, messenger: Messenger){
-        if messenger.signIn(login: login, pass: pass){
-            self.MessengersList.append(messenger)
-        }
-
+        messenger.signInLogPass(login: login, pass: pass)
     }
     func addContact(contact: Person, messengerName:String){
         if let messenger = getMessengerByName(messengerName: messengerName){
@@ -35,10 +32,10 @@ class User : Person {
         }
     }
     func getAllHistory(){
-        for contact in self.FriendList {
-            for messenger in self.MessengersList {
+        for contact in self.friendList {
+            for messenger in self.messengersList {
                 messenger.getHistory(contact: contact)
-                //todo - add messages sorted by date to chat screen
+                //TODO: add messages sorted by date to chat screen
             }
         }
     }
