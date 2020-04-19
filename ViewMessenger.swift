@@ -9,10 +9,11 @@
 import UIKit
 
 
-var messenger: [String] = [" "," "]
+
 
 class ViewMessenger: UIViewController {
 
+    var messenger: [String] = [" "," "]
    let idCell = "MailCell"
     @IBOutlet weak var TableMessenge: UITableView!
     
@@ -33,6 +34,7 @@ extension ViewMessenger:UITableViewDataSource, UITableViewDelegate{
         return messenger.count // to do user count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = TableMessenge.dequeueReusableCell(withIdentifier: idCell)
         cell?.textLabel?.text = messenger [indexPath.row]
@@ -52,4 +54,15 @@ extension ViewMessenger:UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)")
     }
+
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") {
+                _, indexPath in
+                self.messenger.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                
+            }
+            
+            return [deleteAction]
+        }
 }
