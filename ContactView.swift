@@ -8,14 +8,12 @@
 
 import UIKit
 
-var contact: [String] = [" "]
-
 class ContactsView: UIViewController {
-
-    let idCell = "ContactCell"
-    
-    
     @IBOutlet weak var ContactsView: UITableView!
+    
+    var userData : User!
+    let cellID = "ContactCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ContactsView.dataSource = self
@@ -27,17 +25,15 @@ class ContactsView: UIViewController {
 }
 extension ContactsView:UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contact.count
+        return self.userData.friendList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: idCell)
-        if cell == nil{
-            cell = UITableViewCell (style: .default, reuseIdentifier: idCell)
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID) as! ContactCell
         
+        cell.UserName.text = self.userData.friendList[indexPath.row].name
 
-        return cell!
+        return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

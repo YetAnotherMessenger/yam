@@ -9,7 +9,7 @@
 import Foundation
 
 class Message {
-    var Text : String = ""
-    var Sender : String = ""
-    var Time : Date = Date()
+    var text : String = ""
+    var sender : String = ""
+    var time : Date = Date()
 }
