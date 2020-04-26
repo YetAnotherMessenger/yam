@@ -16,28 +16,38 @@ class ViewController: UIViewController {
 
         let vkMessenger = VK()
         vkMessenger.signInWebAuth( success: {
-            vkMessenger.getContacts( success: { contacts in
-                for contact in contacts {
-                    self.userData.friendList.append(contact)
-                }
-                self.userData.messengersList.append(vkMessenger)
-                
-                let vc = menuStoryboard.instantiateViewController(identifier: "BarController") as! UITabBarController
-                vc.modalPresentationStyle = .fullScreen
 
-                let nc = vc.viewControllers!.filter({ (v) -> Bool in
-                        return (v is UINavigationController)
-                })[0] as! UINavigationController
-                let contactsView = vc.viewControllers!.filter({ (v) -> Bool in
-                        return (v is ContactsView)
-                })[0] as! ContactsView
-                let chatView = nc.viewControllers.filter({ (v) -> Bool in
-                        return (v is ViewMessenger)
-                })[0] as! ViewMessenger
-                
-                contactsView.userData = self.userData
-                chatView.userData = self.userData
-                self.present(vc, animated: true, completion: nil)
+            vkMessenger.getFriends( success: { friends in
+                for friend in friends {
+                    self.userData.friendList.append(friend)
+                }
+                vkMessenger.getConversations(success: { contacts in
+                    debugPrint("after get conversations:", contacts)
+                    for contact in contacts {
+                        self.userData.contactsList.append(contact)
+                    }
+                    self.userData.messengersList.append(vkMessenger)
+                    
+                    let vc = menuStoryboard.instantiateViewController(identifier: "BarController") as! UITabBarController
+                    vc.modalPresentationStyle = .fullScreen
+
+                    let nc = vc.viewControllers!.filter({ (v) -> Bool in
+                            return (v is UINavigationController)
+                    })[0] as! UINavigationController
+                    let contactsView = vc.viewControllers!.filter({ (v) -> Bool in
+                            return (v is ContactsView)
+                    })[0] as! ContactsView
+                    let chatView = nc.viewControllers.filter({ (v) -> Bool in
+                            return (v is ViewMessenger)
+                    })[0] as! ViewMessenger
+                    
+                    contactsView.userData = self.userData
+                    chatView.userData = self.userData
+                    self.present(vc, animated: true, completion: nil)
+                    
+                }, failure: { error in
+                    debugPrint(error)
+                })
                 
             }) { error in
                 debugPrint(error)

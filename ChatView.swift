@@ -14,7 +14,7 @@ struct ChatMessenge {
     let date : Date
 }
 
-extension Date{
+extension Date {
     static func dateFromCustomString(customString : String) -> Date{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
@@ -30,7 +30,7 @@ class ChatView: UIViewController {
     @IBOutlet weak var TableViewChat: UITableView!
     @IBOutlet weak var MessengeField: UITextView!
     @IBOutlet weak var SendButton: UIButton!
-    @IBAction func Send(_ sender: Any) {
+    @IBAction func Send (_ sender: Any) {
     }
     
     var ChatMessenges = [
@@ -57,11 +57,8 @@ class ChatView: UIViewController {
         TableViewChat.dataSource = self
         TableViewChat.delegate = self
         super.viewDidLoad()
-        
-
-        }
-       
     }
+}
     
     
 
@@ -127,39 +124,4 @@ extension ChatView : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }
-    
-
-    
-        
-
-
-    
-    
-    
-    
-    
-    
-//     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        view.endEditing(true)
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//
-//    }
-//
-//     func scrollToBot(sender: Notification) {
-//        self.TableViewChat.scrollToRow(at: IndexPath(row: self.messengeMe.count - 1, section: 0), at: .bottom, animated: true)
-//        print("\(self.messengeMe.count - 1)")
-//    }
-//     func keyboardWildShow(sender: Notification){
-//        let info = sender.userInfo
-//        let keyboardFrame: CGRect = (info![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-//        self.view.frame.size.height = UIScreen.main.bounds.height-keyboardFrame.height+44
-//        print("\(CGRect())")
-//    }
-//     func keyboardWillHide (sender: Notification){
-//        self.view.frame.size.height = UIScreen.main.bounds.height
-//    }
-
 }

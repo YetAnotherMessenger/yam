@@ -8,9 +8,6 @@
 
 import UIKit
 
-
-
-
 class ViewMessenger: UIViewController {
     @IBOutlet weak var TableMessenge: UITableView!
     
@@ -26,27 +23,27 @@ class ViewMessenger: UIViewController {
 extension ViewMessenger : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.userData.friendList.count // to do user count
+        return self.userData.contactsList.count // to do user count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = TableMessenge.dequeueReusableCell(withIdentifier: self.cellID) as! ViewCell
-        cell.UserName.text = self.userData.friendList[indexPath.row].name
-        //TODO: get last message from history
-        cell.Messenge.text = "Last message"
+
+        cell.UserName.text = self.userData.contactsList[indexPath.row].name
+        cell.Messenge.text = self.userData.contactsList[indexPath.row].messagesHistory.last!.text
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(indexPath.row)")
+        print(indexPath.row)
     }
 
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") {
                 _, indexPath in
-                self.userData.friendList.remove(at: indexPath.row)
+                self.userData.contactsList.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .automatic)
             }
             return [deleteAction]

@@ -17,6 +17,7 @@ class Person : Hashable {
     var phoneNumber : String
     var telegramID : String
     var photoURLString : String
+    var messagesHistory : [Message] = []
     // TODO: more messengers
     static func == (lhs: Person, rhs: Person) -> Bool {
         return lhs.id == rhs.id

@@ -30,6 +30,7 @@
 		BB46A2732412E1EA00DB74C4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46A2722412E1EA00DB74C4 /* Message.swift */; };
 		BB71E1CC244DA9E2000DABEE /* VKAPIRequestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB71E1CB244DA9E2000DABEE /* VKAPIRequestsData.swift */; };
 		BB71E1CE244DAA18000DABEE /* VKJSONStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB71E1CD244DAA18000DABEE /* VKJSONStructs.swift */; };
+		BB71E1D02455C212000DABEE /* VKChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB71E1CF2455C212000DABEE /* VKChat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		BB46A2722412E1EA00DB74C4 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		BB71E1CB244DA9E2000DABEE /* VKAPIRequestsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAPIRequestsData.swift; sourceTree = "<group>"; };
 		BB71E1CD244DAA18000DABEE /* VKJSONStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKJSONStructs.swift; sourceTree = "<group>"; };
+		BB71E1CF2455C212000DABEE /* VKChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKChat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				BB71E1CD244DAA18000DABEE /* VKJSONStructs.swift */,
 				BB46A2722412E1EA00DB74C4 /* Message.swift */,
 				BB46A266240D567C00DB74C4 /* VKClass.swift */,
+				BB71E1CF2455C212000DABEE /* VKChat.swift */,
 				BB46A26E2412CA4A00DB74C4 /* Person.swift */,
 				BB46A2702412CB3B00DB74C4 /* User.swift */,
 			);
@@ -381,6 +384,7 @@
 				BB71E1CC244DA9E2000DABEE /* VKAPIRequestsData.swift in Sources */,
 				BB46A235240A899F00DB74C4 /* AppDelegate.swift in Sources */,
 				63C903FB2452A0BC00B69356 /* ChatView.swift in Sources */,
+				BB71E1D02455C212000DABEE /* VKChat.swift in Sources */,
 				6330D8D024288E3900DE8547 /* ViewMessenger.swift in Sources */,
 				BB46A237240A899F00DB74C4 /* SceneDelegate.swift in Sources */,
 				63C903F924529FDF00B69356 /* ChatViewCell.swift in Sources */,

@@ -14,8 +14,14 @@ class ChatViewCell: UITableViewCell {
     @IBOutlet weak var MessengeTextLabel: UILabel!
     @IBOutlet weak var MessengeText: UILabel!
     
+    let messengeLabel = UILabel()
+    let bubblebackgroundView = UIView()
+    
+    var ledingConstraint : NSLayoutConstraint!
+    var trialingConstraint :NSLayoutConstraint!
+    
     var chatMesseng : ChatMessenge! {
-        didSet{
+        didSet {
             bubblebackgroundView.backgroundColor = chatMesseng.isIncoming ? .gray : .blue
             messengeLabel.textColor = chatMesseng.isIncoming ? .black : .white
             messengeLabel.text = chatMesseng.text
@@ -31,18 +37,11 @@ class ChatViewCell: UITableViewCell {
         }
     }
     
-    let messengeLabel = UILabel()
-    let bubblebackgroundView = UIView()
-    
-    var ledingConstraint : NSLayoutConstraint!
-    var trialingConstraint :NSLayoutConstraint!
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style:style, reuseIdentifier:reuseIdentifier)
         
         backgroundColor = .clear
         
-//        bubblebackgroundView.backgroundColor = .yellow
         bubblebackgroundView.layer.cornerRadius = 16
         bubblebackgroundView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(bubblebackgroundView)

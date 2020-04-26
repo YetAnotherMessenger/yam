@@ -17,7 +17,7 @@ protocol Messenger: class {
     func signInWebAuth(contextProvider: ASWebAuthenticationPresentationContextProviding)
     func signOut() -> Bool
     func getHistory(contact: Person) ->[ [Person:[Message]] ]
-    func getContacts(success: @escaping (_ response: [Person]) -> Void, failure: @escaping(_ error: NSError?) -> Void)
+    //func getContacts(success: @escaping (_ response: [Person]) -> Void, failure: @escaping(_ error: NSError?) -> Void)
     func addContact(contact: Person) -> Bool
     func sendMessage(message: String) -> Bool
 }

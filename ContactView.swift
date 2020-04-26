@@ -19,20 +19,15 @@ class ContactsView: UIViewController {
         ContactsView.dataSource = self
         ContactsView.delegate = self
     }
-
-  
-
 }
-extension ContactsView:UITableViewDataSource, UITableViewDelegate{
+extension ContactsView : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.userData.friendList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID) as! ContactCell
-        
         cell.UserName.text = self.userData.friendList[indexPath.row].name
-
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -40,7 +35,7 @@ extension ContactsView:UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(indexPath.row)")
+        print(indexPath.row)
     }
 }
    

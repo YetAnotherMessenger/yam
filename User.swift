@@ -9,9 +9,11 @@
 import Foundation
 import AuthenticationServices
 
-class User : Person {
-    var messengersList = [Messenger]()
-    var friendList = [Person]()
+class User {
+
+    var messengersList : [Messenger] = []
+    var friendList : [Person] = []
+    var contactsList : [Person] = []
     
     func getMessengerByName(messengerName: String) -> Messenger? {
         for messenger in self.messengersList {
@@ -34,7 +36,7 @@ class User : Person {
             }
         }
     }
-    
+
     func getAllHistory() {
         for contact in self.friendList {
             for messenger in self.messengersList {

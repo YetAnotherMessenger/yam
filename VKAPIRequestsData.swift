@@ -24,6 +24,10 @@ final class VKURLS {
 
 final class VKAPIMethods {
     static let getFriends = "friends.get"
+    static let getMessagesHistory = "messages.getHistory"
+    static let getConversations = "messages.getConversations"
+    static let getChatInfo = "messages.getChat"
+    static let getUserInfo = "users.get"
 }
 
 final class VKRequestParams {
@@ -46,6 +50,48 @@ final class VKRequestParams {
             URLQueryItem(name: "scope", value: "friends,messages"),
             URLQueryItem(name: "display", value: "mobile"),
             URLQueryItem(name: "response_type", value: "token")
+        ]
+        return requestParams
+    }
+    
+    static func messagesConversationsRequestParams (token : String, offset : Int = 0) -> [String : String] {
+            let requestParams = [
+                "access_token" : token,
+                "offset" : "\(offset)",
+                "count" : "20",
+                "filter" : "all",
+                "v" : "5.103"
+            ]
+            return requestParams
+    }
+    static func chatInfoRequestParams (token : String, chat_ids : [String]) -> [String : String] {
+        var chat_ids_string = ""
+        for id in chat_ids {
+            chat_ids_string += id
+            if id != chat_ids.last {
+                chat_ids_string += ","
+            }
+        }
+        let requestParams = [
+            "access_token" : token,
+            "chat_ids" : chat_ids_string,
+            "v" : "5.103"
+        ]
+        return requestParams
+    }
+    static func userInfoRequestParams (token : String, user_ids : [String]) -> [String : String] {
+        var user_ids_string = ""
+        for id in user_ids {
+            user_ids_string += id
+            if id != user_ids.last {
+                user_ids_string += ","
+            }
+        }
+        let requestParams = [
+            "access_token" : token,
+            "user_ids" : user_ids_string,
+            "fields" : "photo_50",
+            "v" : "5.103"
         ]
         return requestParams
     }
